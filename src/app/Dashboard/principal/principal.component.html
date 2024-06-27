@@ -1,0 +1,61 @@
+<h2 class="titulo d-flex justify-content-center align-items-center">Clasificación de rostros en clases virtuales mediante redes convolucionales en Python</h2>
+<hr>
+<div class="container">
+    <!-- Fila 1: Formulario de Selección -->
+    <div class="row mb-3">
+      <div class="col">
+        <div class="card ">
+          <div class="card-body">
+            <h5 class="card-title"><strong>Seleccione para el reconocimiento</strong></h5>
+            <hr>
+            <form [formGroup]="form">
+              <div class="mb-3">
+                <select class="form-control" formControlName="usuario">
+                  <option value="" hidden>Seleccione un usuario</option>
+                  <option *ngFor="let usuario of usuarios" [value]="usuario.id">
+                    {{ usuario.first_name }} {{ usuario.last_name }}
+                  </option>
+                </select>
+              </div>
+              
+              <div class="mb-3">
+                <button class="btn btn-primary" (click)="onSeleccionar()">Mostrar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Fila 2: Visualización de Imagen e Información Adicional -->
+    <div class="row">
+      <!-- Columna 1: Visualización de la Imagen -->
+      <div class="col-md-6 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center align-items-center"><strong>Visualización de la Imagen</strong></h5>
+            <div *ngIf="selectedAvatar" class="d-flex justify-content-center align-items-center">
+              <img [src]="selectedAvatar" alt="Avatar" class="img-fluid img1">
+              <img [src]="selectedAvatar" alt="Avatar" class="img-fluid img2">
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Columna 2: Información Adicional -->
+      <div class="col-md-6">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-center align-items-center"><strong>Información</strong></h5>
+            <ul class="list-group">
+              <li class="list-group-item d-flex justify-content-around">
+                <strong>Detección con un margen de error</strong>  
+              </li>
+              <!-- Agrega más elementos de la lista según sea necesario -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

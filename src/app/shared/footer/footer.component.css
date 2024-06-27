@@ -1,0 +1,28 @@
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+
+.footer {
+    background-color: #1c325a;
+}
+
+.footer__copy {
+    --padding-container: 13px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer__copyright {
+    font-weight: 500;
+    color: #fff;
+    font-size: 22px;
+    transition: 0.3s color;
+    font-weight: bold;
+}
