@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 
+interface MenuItem{
+  texto:string;
+
+}
 
 
 @Component({
@@ -8,5 +12,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  Menu:MenuItem[] =[
+    {texto:'joel'},
+    {texto:'Favoritos'},
+    
+  ]
 }

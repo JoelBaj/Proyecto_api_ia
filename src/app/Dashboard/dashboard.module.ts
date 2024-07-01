@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SpinnerComponent } from './spinner/spinner.component';
 
-import { PrincipalComponent } from './principal/principal.component';
+import { SpinnerComponent } from './pages/spinner/spinner.component';
+
 import { ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { PrincipalComponent } from './pages/principal/principal.component';
 
 
 
 @NgModule({
   declarations: [
-
+    PrincipalComponent,
     SpinnerComponent
   ],
   imports: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   exports:[
-    SpinnerComponent
+    SpinnerComponent,
+    PrincipalComponent
   ]
 })
 export class DashboardModule { }

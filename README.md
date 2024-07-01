@@ -1,2 +1,2 @@
-#Proyecto IA Grupo 7
-------
+# Proyecto IA Grupo 7
+
